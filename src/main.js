@@ -1,4 +1,5 @@
 export default class App {
+
     factorial(numero) {
         let multiplicacion = 1;
 
@@ -7,6 +8,7 @@ export default class App {
         }
         return multiplicacion;
     }
+
 
     convertirAString(numero) {
         let i = 1;
@@ -19,6 +21,24 @@ export default class App {
         }
         return string;
     }
+
+    obtenerDivisibles(numero) {
+        let i = 1;
+        let divisible = 0;
+
+        do{
+            if(numero % i === 0) {
+                divisible ++;
+                i ++;
+
+            } else {
+                i ++;
+            }
+
+        }
+        while(i <= numero);
+        return divisible;
+    }
 }
 
 let app = new App();
@@ -28,5 +48,10 @@ console.log(app.factorial(5));
 
 console.log("Probando convertirAString");
 console.log(app.convertirAString(5));
+
+console.log("Probando obtenerDivisibles");
+console.log(app.obtenerDivisibles(6));
+
+
 
 
