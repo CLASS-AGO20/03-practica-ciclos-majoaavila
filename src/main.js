@@ -39,6 +39,22 @@ export default class App {
         while(i <= numero);
         return divisible;
     }
+
+    elevar(numero, potencia) {
+        let i = 1;
+        let total = 1;
+
+        while(i <= potencia) {
+            total = total * numero;
+            i ++;
+        }
+        return total;
+
+
+        
+        
+        
+}
 }
 
 let app = new App();
@@ -51,6 +67,11 @@ console.log(app.convertirAString(5));
 
 console.log("Probando obtenerDivisibles");
 console.log(app.obtenerDivisibles(6));
+
+console.log("Probando elevar");
+console.log(app.elevar(3, 4));
+
+
 
 
 
